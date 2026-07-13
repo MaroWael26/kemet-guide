@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #C8973A;
+    --gold-light: #E3B865;
+    --gold-dark: #8B6420;
+    --cream: #F4EFE4;
+    --cream-dark: #E8DFCC;
+    --brown-dark: #1a1508;
+    --brown-light: #3D2E0E;
+    --sand: #D4B483;
+    --white: #FDFAF5;
+    --bg-image: url("../img/login-img.jpeg");
+    --twoPages-bg: rgba(255, 255, 255, 0.1);
+    --twoPages-border: rgba(255, 255, 255, 0.2);
+}
+
+[dark-theme="dark"] {
+    --gold: #8B6420;
+    --cream: #ffffff;
+    --bg-overlay:white;
+    --text-color: #d4b483;
+    --body-bg: rgba(0, 0, 0, 0.7);
+    --twoPages-bg: rgba(0, 0, 0, 0.8);
+    --twoPages-border: rgba(131, 131, 131, 0.3);
+}
+
+
+.login-form {
+    background: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.twoPages {
+    color: var(--cream);
+    background: var(--twoPages-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid var(--twoPages-border);
+    padding: 25px 40px;
+    width: 40%;
+    max-width: 90%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: 4%;
+}
+
+body.dark-theme .twoPages {
+    background: rgba(0, 0, 0, 0.75);
+    border-color: rgba(131, 131, 131, 0.3);
+    margin: 60px auto 0 auto;
+}
+
+.twoPages h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+body.dark-theme .main h2,
+body.dark-theme .main a {
+    color: #8B6420;
+}
+
+body.dark-theme label,
+body.dark-theme .main p {
+    color: #ffffff;
+}
+
+label {
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+body.dark-theme input {
+    background-color: #271f0d;
+    color: #D4B483;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 8px rgba(200, 151, 58, 0.2);
+}
+
+.btn {
+    width: 48%;
+    height: 45px;
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 4px;
+    margin-left: 5px;
+    background-color: var(--gold);
+    color: #f3f3f3;
+    box-shadow: 3px 3px 8px rgba(189, 172, 142, 0.4), -3px -3px 8px rgba(49, 48, 48, 0.8);
+}
+
+.btn:hover {
+    background-color: var(--gold-light);
+}
+
+body.dark-theme .btn {
+    background-color: var(--gold-dark);
+    color: #1a1508;
+}
+
+body.dark-theme .btn:hover {
+    background-color: var(--sand);
+}
+
+.account a {
+    color: var(--gold-light);
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.remember-me {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+#error-msg {
+    color: rgb(218, 0, 0); 
+    font-size: 16px;
+    min-height: 20px;
+    margin-bottom: 8px;
+}
+
+#theme-toggle {
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    color: var(--cream-dark);
+    cursor: pointer;
+}
+
+#theme-toggle .dark-theme:hover {
+    color: var(--white);
+    background-color: var(--gold-light);
+    cursor: pointer;
+}
+
+footer {
+    padding: 10px 100px;
+    text-align: center;
+    background: var(--brown-dark);
+    color: var(--white);
+    border-top: 1px solid var(--gold);
+}
