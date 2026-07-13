@@ -29,5 +29,5 @@ if (user) {
 document.getElementById('sign-out-btn')?.addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.removeItem('loggedInUser');
-    location.href = 'logIn.html';
+    location.href = 'index.html';
 });

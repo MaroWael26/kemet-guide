@@ -59,7 +59,7 @@ if (loginForm) {
         localStorage.setItem('loggedInUser', JSON.stringify(user));
         showToast('toast');
         setTimeout(function() {
-            location.href = 'index.html';
+            location.href = 'home.html';
         }, 1500);
     });
 }
@@ -93,7 +93,7 @@ if (signupForm) {
         saveUser(data);
         showToast('toast');
         setTimeout(function() {
-            location.href = 'logIn.html';
+            location.href = 'index.html';
         }, 1500);
     });
 }
